@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resilient-webhook-bridge"
+version = "1.0.0"
+description = "HMAC-authenticated webhook ingress with idempotency, retries, and a local dashboard"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "NIKHIL H P", email = "hpnikhilpartheban2008@gmail.com" }]
+dependencies = []
+
+[project.scripts]
+resilient-webhook-bridge = "dashboard:main"
+
+[tool.setuptools]
+py-modules = ["dashboard", "resilient_webhook_bridge"]
+
+[tool.setuptools.data-files]
+"." = ["dashboard.html"]
